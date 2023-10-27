@@ -17,3 +17,9 @@ Runs a baseline simulation for each of the single meal experiments ("Meal + KCl"
 
 ## runODEMorris_MealKCl.r
 Runs Morris method analysis for the "Meal + KCl" experiments.
+
+## runODEMorris_MealOnly.r
+Runs Morris method analysis for "Meal Only" experiments
+
+## runODEMorris_KClOnly.r
+Runs Morris method analysis for "KCl Only" experiments
