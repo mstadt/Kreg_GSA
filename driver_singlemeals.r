@@ -130,7 +130,7 @@ if (save_info) {
 
     fKClOnly <- paste("./Results/", today,
                         "_MealSim_",
-                        "_type-", "MealOnly",
+                        "_type-", "KClOnly",
                         "_notes-", notes,
                         ".csv",
                         sep = "")

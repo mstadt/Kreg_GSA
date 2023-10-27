@@ -49,4 +49,5 @@ po/*~
 rsconnect/
 
 # Results folder
-Results/*
+Results/
+Figures/results_final/
