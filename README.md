@@ -6,6 +6,9 @@
 
  ## Figures/
  Scripts for making figures from the results
+ **results_final** copy of results used to make the figures
+
+ **plot_MealSims.m** plot simulation results for the 3 single meal simulation types (Meal Only, KCl Only, Meal + KCl)
 
 # Main drivers
 

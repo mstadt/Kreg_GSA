@@ -49,4 +49,4 @@ po/*~
 rsconnect/
 
 # Results folder
-Results/
+Results/*

@@ -16,7 +16,7 @@ source("mealmod_MealKCl.r")
 params <- set_params()
 varnames <- get_varnames()
 t0 = 0
-tf = (6 + 8) * 60
+tf = (6 + 8 + 2) * 60
 tvals = seq(t0,tf,1)
 #--------------
 # Meal + KCl
