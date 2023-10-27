@@ -28,7 +28,7 @@ cmap = parula(6);
 c1 = cmap(1,:);
 c2 = cmap(3,:);
 c3 = cmap(4,:);
-ls1 = '-.'; ls2 = ':'; ls3 = '-';
+ls1 = '-'; ls2 = ':'; ls3 = '-.';
 cgraymap = gray(5);
 cgray = cgraymap(3,:);
 lwgray = 2; lsgray = '--';
