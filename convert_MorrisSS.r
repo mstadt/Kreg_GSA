@@ -2,8 +2,8 @@
 # this script to save results into a .csv format
 # for making figures 
 
-# file whwere Morris SS results are saved
-Rdat_fname = "./MorrisResults/2023-09-20_MorrisAnalysis_SS_rvalinc.RData"
+# file where Morris SS results are saved
+Rdat_fname = "./Results/2023-10-27_MorrisAnalysis_SS.RData"
 load(Rdat_fname)
 
 date_to_save <- Sys.Date()
@@ -11,7 +11,7 @@ notes <- readline(prompt = "notes for filename: ")
 
 # amt_gut Morris values
 var <- 'amt_gut'
-save_fname = paste0("./MorrisResults/",
+save_fname = paste0("./Results/",
                         date_to_save,
                         "_MorrisSS_EE",
                         "_var-", var,
@@ -26,7 +26,7 @@ write.csv(x_amtgut$ee, file = save_fname)
 
 # plas conc
 var <- 'plas_conc'
-save_fname = paste0("./MorrisResults/",
+save_fname = paste0("./Results/",
                         date_to_save,
                         "_MorrisSS_EE",
                         "_var-", var,
@@ -39,7 +39,7 @@ write.csv(x_plasconc$ee, file = save_fname)
 
 # inter conc
 var <- 'inter_conc'
-save_fname = paste0("./MorrisResults/",
+save_fname = paste0("./Results/",
                         date_to_save,
                         "_MorrisSS_EE",
                         "_var-", var,
@@ -52,7 +52,7 @@ write.csv(x_interconc$ee, file = save_fname)
 
 # muscle conc
 var <- 'mus_conc'
-save_fname = paste0("./MorrisResults/",
+save_fname = paste0("./Results/",
                         date_to_save,
                         "_MorrisSS_EE",
                         "_var-", var,
