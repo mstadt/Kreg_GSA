@@ -3,6 +3,7 @@
 
  ## Results/
  Save results from the simulations and global sensitivity analysis in this folder.
+ Use **convert_MorrisResults.r** and **convert_MorrisSS.r** to convert .RData results files into .csv for plotting.
 
  ## Figures/
  Scripts for making figures from the results
@@ -23,3 +24,6 @@ Runs Morris method analysis for "Meal Only" experiments
 
 ## runODEMorris_KClOnly.r
 Runs Morris method analysis for "KCl Only" experiments
+
+## runMorris_SS.r
+Runs Morris method analysis for steady state results
