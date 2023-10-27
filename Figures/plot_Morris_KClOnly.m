@@ -1,10 +1,10 @@
-% Meal + KCl Morris Plot figure for write up
+% KCl Only Morris Plots figures for write up
 clear all;
 
 %% Load data 
 date2save = "2023-10-27";
 notes = "MA1";
-sim_type = "MealKCl";
+sim_type = "KClOnly";
 
 % amt_gut
 var = "amt_gut"
@@ -114,7 +114,7 @@ figure(1)
 clf
 cmap = turbo(length(allIDs));
 xminmax = [-6, 8];
-yminmax = [0.0, 3.0];
+yminmax = [0.0, 3.2];
  ms = '.';
 fx = 22; fy = 35; fleg = 16; ft = 22;
 ftxt = 16; fgca = 18;
@@ -256,10 +256,9 @@ musc_minMI = min(musc_MIvals_all, [], 2);
 figure(2)
 marksize = 15;
 marksize2 = 12;
-%cmap = turbo(18);
-cmap = parula(4);
-cmax = cmap(1,:);%cmap(3,:);
-cmean = cmap(1,:);
+cmap = turbo(18);
+cmax = cmap(16,:);%cmap(3,:);
+cmean = cmap(16,:);
 yminmax = [0.0, 4.25];
 ms1 = '*'; % for minmax
 ms2 = 'o'; % for mean
@@ -267,6 +266,8 @@ nr = 2; nc = 1;
 clf;
 subplot(nr, nc, 1)
 hold on
+
+
 plot(plas_meanMI(pIDs), 'markersize', marksize, 'marker', ms2,...
             'color', cmean, 'markerfacecolor', cmean,'linestyle', 'none')
 errorbar(plas_meanMI(pIDs), plas_sdMI(pIDs),...
