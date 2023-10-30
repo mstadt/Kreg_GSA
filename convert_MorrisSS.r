@@ -3,7 +3,7 @@
 # for making figures 
 
 # file where Morris SS results are saved
-Rdat_fname = "./Results/2023-10-27_MorrisAnalysis_SS.RData"
+Rdat_fname = "./Results/2023-10-30_MorrisAnalysis_SS1.RData"
 load(Rdat_fname)
 
 date_to_save <- Sys.Date()
