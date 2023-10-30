@@ -2,11 +2,12 @@
 clear all;
 
 %% Load data
-date2save = "2023-10-27";
-notes = "MA1";
+date2save = "2023-10-30";
+
 
 % Meal + KCl
 sim_type = "MealKCl"
+notes = "MealKCl1";
 
 var = "conc_plas"
 fname = strcat("./results_final/", ...
@@ -26,6 +27,7 @@ Tmusc_MealKCl = readtable(fname,'ReadRowNames',true);
 
 % Meal Only
 sim_type = "MealOnly"
+notes = "MealOnly1";
 
 var = "conc_plas"
 fname = strcat("./results_final/", ...
@@ -45,6 +47,7 @@ Tmusc_MealOnly = readtable(fname,'ReadRowNames',true);
 
 % KCl Only
 sim_type = "KClOnly"
+notes = "KClOnly1";
 
 var = "conc_plas"
 fname = strcat("./results_final/", ...
@@ -130,6 +133,8 @@ ms2 = 'diamond';
 ms3 = 'square';
 nr = 2; nc = 1;
 
+yminmax = [0.0,3.5];
+
 subplot(nr,nc,1)
 hold on
 plot(MIstats_plasMealKCl(IDs,1), 'markersize', marksize, 'marker', ms1,...
@@ -154,7 +159,7 @@ legend('Meal + KCl', '', ...
 set(gca, 'fontsize', 18)
 xlabel('Parameter', 'fontsize', fx)
 ylabel('Morris Index', 'fontsize', fy)
-ylim([0.0,4.5])
+ylim(yminmax)
 xticks(1:23)
 xticklabels(parnames_plt_sort)
 xlim([1,23])
@@ -189,7 +194,7 @@ set(gca, 'fontsize', 18)
 xticks(1:23)
 xticklabels(parnames_plt_sort)
 xlim([1,23])
-ylim([0.0,4.5])
+ylim(yminmax)
 title('Intracellular [K^+]')
 grid on
 
