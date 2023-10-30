@@ -120,7 +120,7 @@ end
 figure(1)
 clf
 marksize = 15;
-fleg = 18; fx = 18; fy = 18;
+fleg = 18; fx = 18; fy = 18; ft = 22;
 cmap = parula(4);
 c1 = cmap(1,:);
 c2 = cmap(2,:);
@@ -158,6 +158,7 @@ ylim([0.0,4.5])
 xticks(1:23)
 xticklabels(parnames_plt_sort)
 xlim([1,23])
+title('Plasma [K^+]', 'fontsize', ft)
 grid on
 
 subplot(nr,nc,2)
@@ -189,6 +190,7 @@ xticks(1:23)
 xticklabels(parnames_plt_sort)
 xlim([1,23])
 ylim([0.0,4.5])
+title('Intracellular [K^+]')
 grid on
 
 AddLetters2Plots(figure(1), {'(A)', '(B)'},...
