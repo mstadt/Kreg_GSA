@@ -2,8 +2,8 @@
 clear all;
 
 %% Load data 
-date2save = "2023-10-27";
-notes = "MA1";
+date2save = "2023-10-30";
+notes = "MealKCl1";
 sim_type = "MealKCl";
 
 % amt_gut
@@ -114,7 +114,7 @@ figure(1)
 clf
 cmap = turbo(length(allIDs));
 xminmax = [-6, 8];
-yminmax = [0.0, 3.0];
+yminmax = [0.0, 2.5];
  ms = '.';
 fx = 22; fy = 35; fleg = 16; ft = 22;
 ftxt = 16; fgca = 18;
@@ -260,7 +260,7 @@ marksize2 = 12;
 cmap = parula(4);
 cmax = cmap(1,:);%cmap(3,:);
 cmean = cmap(1,:);
-yminmax = [0.0, 4.25];
+yminmax = [0.0, 3.0];
 ms1 = '*'; % for minmax
 ms2 = 'o'; % for mean
 nr = 2; nc = 1;

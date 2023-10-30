@@ -1,7 +1,7 @@
 clear all;
 %% Load elementary effects data
-date2save = "2023-10-27";
-notes = 'MASS1';
+date2save = "2023-10-30"; %"2023-10-27";
+notes = "SS1"; %'MASS1';
 
 % plas_conc
 var = "plas_conc"
@@ -79,21 +79,27 @@ for jj = 1:length(MIsig)
             'linestyle', 'none', 'DisplayName', pname_plt{id})
     if or(plasvals(2,id) > 0.5, plasvals(3,id) > 0.1)
         if id == 12 % AdtKsec
-            dx = -0.2; dy = 0.1;
+            dx = -0.2; dy = 0.12;
         elseif id == 22 % ALD_eq
             dx = -0.25; dy = 0.1;
         elseif id == 15 % AcdKsec
-            dx = -0.25; dy = 0.1;
+            dx = -0.25; dy = 0.12;
+        elseif id == 17 % AcdKreab
+            dx = -0.15; dy = -0.1;
         elseif id == 16 % BcdKsec
             dx = 0.05; dy = 0.07;
         elseif id == 7 % mKaldo
-            dx = -0.15; dy = -0.1;
+            dx = -0.15; dy = -0.15;
         elseif id == 21 % Kecf_base
-            dx = -0.1; dy = -0.1;
+            dx = -0.1; dy = -0.12;
+        elseif id == 11 % phi_dtKsec_eq
+            dx = -0.1; dy = 0.15;
+        elseif id == 10 % phi_GFR
+            dx = -0.1; dy = 0.12;
         elseif plasvals(2,id) > 2.0
             dx = -0.22; dy = -0.045;
         else
-            dx = -0.1; dy = 0.1;
+            dx = -0.1; dy = 0.125;
         end
         text(plasvals(2,id) + dx, plasvals(3,id) + dy, pname_plt{id},...
             'fontsize', ftxt)
@@ -120,11 +126,13 @@ for jj = 1:length(MIsig)
         if id == 12 % AdtKsec
             dx = 4; dy = 0;
         elseif id == 22 % ALD_eq
-            dx = -2; dy = -7;
+            dx = -2; dy = 7;
+        elseif id == 17 % AcdKreab
+            dx = -3; dy = 5;
         elseif id == 16 % BcdKsec
-            dx = 5; dy = 0;
+            dx = 0; dy = -7;
         elseif id == 15 % AcdKsec
-            dx = -10; dy = -2;
+            dx = -10; dy = -3;
         elseif muscvals(2,id) > 60
             dx = -2; dy = -7;
         elseif muscvals(3,id) > 20
@@ -139,8 +147,10 @@ end
 set(gca, 'fontsize', fgca)
 xlabel('\mu*', 'fontsize', fx)
 ylabel('\sigma', 'fontsize', fy)
-ylim([0.0, 160])
-xlim([0.0, 160])
+ylim([0.0, 150])
+xlim([0.0, 150])
+xticks(0.0:25:150)
+yticks(0.0:25:150)
 title('Intracellular [K^+]', 'fontsize', ft)
 grid on
 

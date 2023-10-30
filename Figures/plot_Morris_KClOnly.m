@@ -2,8 +2,8 @@
 clear all;
 
 %% Load data 
-date2save = "2023-10-27";
-notes = "MA1";
+date2save = "2023-10-30";
+notes = "KClOnly1";
 sim_type = "KClOnly";
 
 % amt_gut
@@ -114,7 +114,7 @@ figure(1)
 clf
 cmap = turbo(length(allIDs));
 xminmax = [-6, 8];
-yminmax = [0.0, 3.2];
+yminmax = [0.0, 2.5];
  ms = '.';
 fx = 22; fy = 35; fleg = 16; ft = 22;
 ftxt = 16; fgca = 18;
