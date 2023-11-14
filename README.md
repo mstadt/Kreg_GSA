@@ -1,5 +1,7 @@
 # Kreg_GSA
- R version of K regulation model used for Morris Method analysis
+ R version of K regulation model used for Morris Method analysis. 
+
+ This code was used for [Stadt & Layton, A mathematical model of whole-body potassium regulation: Global parameter sensitivity analysis, preprint](https://www.biorxiv.org/content/10.1101/2023.11.10.566654v1)
 
  # Main driver files
 These are the main driver files to compute simulation results and the Morris Method analysis 
