@@ -110,13 +110,12 @@ mealmod_MealOnly <- function(Time, State, Pars) {
             } else {
                 print("something went wrong with t_insulin")
             }
-            L = 100
-            x0 = 0.5381
-            k = 1.069
-            ins_A = A_insulin
-            ins_B = 100 * B_insulin
-            temp = (ins_A*(L/(1+exp(-k*(log10(C_insulin)
-                    -log10(x0)))))+ ins_B)/100
+            # impact of insulin
+            max_rho = A_insulin
+            cins_ss = 0.1234 # steady state C_insulin
+            m = (max_rho - 1.0)/(0.325 - cins_ss)
+            b = max_rho - 0.325*m
+            temp = m * C_insulin + b
             rho_insulin = max(1.0, temp)
         } else {
             # set insulin to SS amount
