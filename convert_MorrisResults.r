@@ -3,8 +3,8 @@
 # for making figures
 
 # file where Morris results are saved
-Rdat_fname = "./Results/2023-10-30_MorrisAnalysis_MealOnly1.RData"
-obj_type <- "MealOnly"
+Rdat_fname = "./Results/2024-04-22_MorrisAnalysis_MealOnly.RData"
+obj_type <- "MealOnly" #"MealOnly"
 load(Rdat_fname) # load data into workspace
 
 date_to_save <- Sys.Date()
