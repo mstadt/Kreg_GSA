@@ -2,8 +2,8 @@
 clear all;
 
 %% Load data 
-date2save = "2023-10-30";
-notes = "MealKCl1";
+date2save = "2024-04-22"; %"2023-10-30";
+notes = "updateins"; %"MealKCl1";
 sim_type = "MealKCl";
 
 % amt_gut
@@ -61,7 +61,6 @@ parnames = ["V_plasma", ...
             "B_cdKsec", ...
             "A_cdKreab", ...
             "A_insulin", ...
-            "B_insulin", ...
             "KMuscleBase",...
             "Kecf_base",...
             "ALD_eq",...
@@ -109,16 +108,16 @@ temp = max(musc_mustarvals_all, [], 2);
 mmus_ids = find(temp > mus_min);
 allIDs = union(allIDs, mmus_ids);
 
-% make plot
+%% make plot
 figure(1)
 clf
 cmap = turbo(length(allIDs));
 xminmax = [-6, 8];
-yminmax = [0.0, 2.5];
+yminmax = [0.0, 2.52];
  ms = '.';
 fx = 22; fy = 35; fleg = 16; ft = 22;
 ftxt = 16; fgca = 18;
-lw = 3; ls = {'-', '--', ':'}; % linestyles
+lw = 4; ls = {'-', '--', ':'}; % linestyles
 % K plas mu star
 subplot(nrows,ncols,1)
 hold on

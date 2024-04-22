@@ -2,12 +2,13 @@
 clear all;
 
 %% Load data
-date2save = "2023-10-30";
+
 
 
 % Meal + KCl
+date2save = "2024-04-22";
 sim_type = "MealKCl"
-notes = "MealKCl1";
+notes = "updateins";
 
 var = "conc_plas"
 fname = strcat("./results_final/", ...
@@ -26,8 +27,9 @@ fname = strcat("./results_final/", ...
 Tmusc_MealKCl = readtable(fname,'ReadRowNames',true);
 
 % Meal Only
+date2save = "2024-04-22";
 sim_type = "MealOnly"
-notes = "MealOnly1";
+notes = "updateins";
 
 var = "conc_plas"
 fname = strcat("./results_final/", ...
@@ -46,6 +48,7 @@ fname = strcat("./results_final/", ...
 Tmusc_MealOnly = readtable(fname,'ReadRowNames',true);
 
 % KCl Only
+date2save = "2023-10-30";
 sim_type = "KClOnly"
 notes = "KClOnly1";
 
@@ -84,7 +87,6 @@ parnames = ["V_plasma", ...
             "B_cdKsec", ...
             "A_cdKreab", ...
             "A_insulin", ...
-            "B_insulin", ...
             "KMuscleBase",...
             "Kecf_base",...
             "ALD_eq",...
