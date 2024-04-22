@@ -4,24 +4,24 @@ clear all
 %% Import simulation data
 fprintf('loading data \n')
 % Meal + KCl
-fname1 = "2023-10-27_MealSim__type-MealKCl_notes-singlemeal.csv";
+fname1 = "2024-04-22_MealSim__type-MealKCl_notes-testing.csv";
 dat1   = readtable(strcat("./results_final/",fname1));
 lab1   = "Meal + KCl";
 
 % KCl only
-fname2 = "2023-10-27_MealSim__type-KClOnly_notes-singlemeal.csv";
+fname2 = "2024-04-22_MealSim__type-KClOnly_notes-testing.csv";
 dat2   = readtable(strcat("./results_final/",fname2));
 lab2   = 'KCl Only';
 
 % Meal only
-fname3 = "2023-10-27_MealSim__type-MealOnly_notes-singlemeal.csv";
+fname3 = "2024-04-22_MealSim__type-MealOnly_notes-testing.csv";
 dat3   = readtable(strcat("./results_final/",fname3));
 lab3   = 'Meal Only';
 
 %% Make figure
 tshift = 460; % fasting time
 % figure specs
-lw = 3;
+lw = 5;
 f.xlab = 18; f.ylab = 18; f.title = 20;
 f.leg = 16; f.gca = 16;
 cmap = parula(6);
